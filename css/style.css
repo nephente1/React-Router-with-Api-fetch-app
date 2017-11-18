@@ -1,0 +1,80 @@
+* {
+  font-family: 'Poiret One', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 4px; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+body {
+  background: #f9f9f9; }
+
+p, li {
+  font-size: 22px;
+  margin: 15px;
+  letter-spacing: 2px;
+  line-height: 1.5em; }
+  p img, li img {
+    width: 250px;
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px; }
+
+ul {
+  margin-top: 40px; }
+
+.header {
+  background: radial-gradient(farthest-side, #182158 0%, #030414 100%) repeat 0 0;
+  padding: 20px 40px;
+  color: white;
+  margin-bottom: 40px; }
+  .header p {
+    margin-bottom: 15px;
+    font-family: 'Chelsea Market', cursive;
+    font-weight: 700;
+    font-size: 34px; }
+
+.navEl {
+  display: inline;
+  margin: 0 40px 0 0; }
+  .navEl a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold; }
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto; }
+
+.content {
+  padding: 20px; }
+
+h2 {
+  margin: 60px 0;
+  font-size: 40px; }
+
+.instafeed {
+  list-style: none; }
+
+.instafeed li {
+  float: left;
+  width: 220px;
+  height: 220px;
+  margin: 10px; }
+
+.instafeed li img {
+  max-width: 100%;
+  max-height: 100%; }
+
+button {
+  padding: 10px 20px;
+  margin: auto;
+  display: flex;
+  margin-top: 20px;
+  font-size: 1.5em; }
