@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function(){
 				<div>
             	<TextTyper text = "Welcome to my React App!" />
             	
-            	<p><img src="./images/react.png"></img>This is my first React application. I used React router to navigate the page. The content has been filled with API and fetch() method fo showing the Pictures. </p>
+            	<p><img src="./images/react.png"></img>This is my first React.js application. I've used React router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. </p>
 					<p>There are some examples of using in diffrent ways how to present the content. </p>
            	<p>Pictures have a source in the external api. What it include?</p>
             	<p>
 				<ul>
             	<li>We have a NASA picture of the day, that changes automaticly every day. </li>
 					<li>Instagram photos of a User, content will be updated whe user add some next pictures to his own account on instagram. </li>
-            	<li>A gallery of pictures, that have a source in my own json included on the server.</li>
+            	<li>A gallery of pictures, that have a source in my own built json included on the server.</li>
             	</ul></p>
 			</div>
 				)
