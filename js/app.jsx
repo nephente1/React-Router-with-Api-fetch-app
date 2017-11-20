@@ -40,10 +40,8 @@ document.addEventListener('DOMContentLoaded', function(){
         render() {
             return <div>
             	<TextTyper text = "Contact" />
-            	<p><img src="./images/cat.jpeg"></img></p>
-            	<p>Lorem Ipsum</p>
-            	<p>ul. Krakowska 20, 30-300 Kraków</p>
-            	<p>tel: 666 777 888</p>
+            	<p><a href="https://www.linkedin.com/in/katarzyna-polakowska/" target="_blank"><i className="fa fa-linkedin-square fa-5x"></i></a></p>
+				<p>katarzynapol (at) vp.pl</p>
             </div>
         }
     }

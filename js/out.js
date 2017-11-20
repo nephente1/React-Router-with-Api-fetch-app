@@ -14239,22 +14239,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     _react2.default.createElement(
                         'p',
                         null,
-                        _react2.default.createElement('img', { src: './images/cat.jpeg' })
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://www.linkedin.com/in/katarzyna-polakowska/', target: '_blank' },
+                            _react2.default.createElement('i', { className: 'fa fa-linkedin-square fa-5x' })
+                        )
                     ),
                     _react2.default.createElement(
                         'p',
                         null,
-                        'Lorem Ipsum'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'ul. Krakowska 20, 30-300 Krak\xF3w'
-                    ),
-                    _react2.default.createElement(
-                        'p',
-                        null,
-                        'tel: 666 777 888'
+                        'katarzynapol (at) vp.pl'
                     )
                 );
             }
@@ -25499,7 +25493,7 @@ var Photos = function (_React$Component) {
 
 			return _react2.default.createElement(
 				'div',
-				null,
+				{ className: 'clearfix' },
 				_react2.default.createElement(_TextTyper2.default, { text: 'Checkout some photos from Instagram' }),
 				_react2.default.createElement(
 					'ul',
@@ -25575,7 +25569,6 @@ var About = function (_React$Component) {
 			if (this.state.nasaPhoto === null) {
 				return null;
 			}
-			console.log(this.state.nasaPhoto.url + "tu");
 
 			return _react2.default.createElement(
 				'div',
@@ -25690,10 +25683,10 @@ var Gallery = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'clearfix' },
-					_react2.default.createElement(_TextTyper2.default, { text: 'Watch the cat gallery' }),
+					_react2.default.createElement(_TextTyper2.default, { text: 'Watch the gallery of images' }),
 					_react2.default.createElement(
 						'ul',
-						{ className: 'instafeed' },
+						{ className: 'gallery' },
 						gallery
 					)
 				),

@@ -2,23 +2,23 @@
   "items": [
     {
       "id" :1,
-      "url": "./images/cat.jpeg"
+      "url": "./images/lake_bike.jpg"
     },
     {
       "id": 2,
-      "url": "./images/cat.jpeg"
+      "url": "./images/beach_sunset.jpg"
     },
     {
       "id": 3,
-      "url": "./images/cat.jpeg"
+      "url": "./images/beach.jpg"
     },
     {
       "id": 4,
-      "url": "./images/cat.jpeg"
+      "url": "./images/beach2.jpg"
     },
     {
       "id": 5,
-      "url": "./images/cat.jpeg"
+      "url": "./images/beskidy.jpg"
     },
     {
       "id": 6,
@@ -26,35 +26,51 @@
     },
     {
       "id": 7,
-      "url": "./images/cat.jpeg"
+      "url": "./images/comp.jpg"
     },
     {
       "id": 8,
-      "url": "./images/cat.jpeg"
+      "url": "./images/forest.jpg"
     },
     {
       "id": 9,
-      "url": "./images/cat.jpeg"
+      "url": "./images/greenfield.jpg"
     },
     {
       "id": 10,
-      "url": "./images/cat.jpeg"
+      "url": "./images/motto.jpg"
     },
     {
       "id": 11,
-      "url": "./images/cat.jpeg"
+      "url": "./images/mountainlake.jpg"
     },
     {
       "id": 12,
-      "url": "./images/cat.jpeg"
+      "url": "./images/mountainlake2.jpg"
     },
     {
       "id": 13,
-      "url": "./images/cat.jpeg"
+      "url": "./images/pomost.jpg"
     },
     {
       "id": 14,
-      "url": "./images/cat.jpeg"
+      "url": "./images/rocks.jpg"
+    },
+	      {
+      "id": 15,
+      "url": "./images/slide1.jpg"
+    },
+	{
+      "id": 16,
+      "url": "./images/sunhouse.jpg"
+	},
+	{
+      "id": 17,
+      "url": "./images/sunset.jpg"
+    },
+	{
+      "id": 18,
+      "url": "./images/train.jpg"
     }
   ]
 }

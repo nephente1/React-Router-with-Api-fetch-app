@@ -23,7 +23,6 @@ class About extends React.Component {
 			if(this.state.nasaPhoto === null) {
 				return null;
 			}
-			console.log(this.state.nasaPhoto.url+"tu");
 			
 			return (<div>
 			<TextTyper text = "NASA: Photo of the Day" />

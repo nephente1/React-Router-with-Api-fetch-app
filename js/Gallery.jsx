@@ -22,7 +22,7 @@ class Gallery extends React.Component {
 		}
 	
 		loadData = () => {
-			var page = this.state.page+1;			
+			let page = this.state.page + 1;			
 			fetch('http://localhost:3000/items?_page='+page+'&_limit=6')
 			.then( resp => resp.json() )
 			.then( img => {
@@ -45,9 +45,9 @@ class Gallery extends React.Component {
 			
 			return <div>
 				<div className="clearfix">
-			<TextTyper text = "Watch the cat gallery" />
+			<TextTyper text = "Watch the gallery of images" />
 				
-				<ul className="instafeed">
+				<ul className="gallery">
 					{gallery}
 				</ul>
 			</div>
