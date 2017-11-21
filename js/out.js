@@ -14178,7 +14178,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         'p',
                         null,
                         _react2.default.createElement('img', { src: './images/react.png' }),
-                        'This is my first React application. I used React router to navigate the page. The content has been filled with API and fetch() method fo showing the Pictures. '
+                        'This is my first React.js application. I\'ve used React router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. '
                     ),
                     _react2.default.createElement(
                         'p',
@@ -14209,7 +14209,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             _react2.default.createElement(
                                 'li',
                                 null,
-                                'A gallery of pictures, that have a source in my own json included on the server.'
+                                'A gallery of pictures, that have a source in my own built json included on the server.'
                             )
                         )
                     )
@@ -25494,7 +25494,7 @@ var Photos = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'clearfix' },
-				_react2.default.createElement(_TextTyper2.default, { text: 'Checkout some photos from Instagram' }),
+				_react2.default.createElement(_TextTyper2.default, { text: 'Some photos from Instagram Api' }),
 				_react2.default.createElement(
 					'ul',
 					{ className: 'instafeed' },
@@ -25573,7 +25573,7 @@ var About = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				null,
-				_react2.default.createElement(_TextTyper2.default, { text: 'NASA: Photo of the Day' }),
+				_react2.default.createElement(_TextTyper2.default, { text: 'NASA: Photo of the Day from Nasa-Api' }),
 				_react2.default.createElement(
 					'p',
 					null,
@@ -25612,8 +25612,6 @@ var _TextTyper2 = _interopRequireDefault(_TextTyper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -25628,24 +25626,8 @@ var Gallery = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this, props));
 
-		_this.loadData = function () {
-			var page = _this.state.page + 1;
-			fetch('http://localhost:3000/items?_page=' + page + '&_limit=6').then(function (resp) {
-				return resp.json();
-			}).then(function (img) {
-				var stateImages = [].concat(_toConsumableArray(_this.state.images), _toConsumableArray(img));
-
-				_this.setState({
-					images: stateImages,
-					page: page
-				});
-			}).catch(function (e) {
-				return console.log(e);
-			});
-		};
-
 		_this.state = {
-			images: [],
+			images: null, //[]
 			page: 0
 		};
 		return _this;
@@ -25654,22 +25636,43 @@ var Gallery = function (_React$Component) {
 	_createClass(Gallery, [{
 		key: 'componentDidMount',
 		value: function componentDidMount() {
-			this.loadData();
-			//			fetch('http://localhost:3000/items?_page=1&_limit=6')
-			//			.then( resp => resp.json() )
-			//			.then( img => this.setState({ 
-			//				images: img 
-			//			}) )
-			//			.catch( e => console.log(e) );
+			var _this2 = this;
+
+			//			this.loadData();			
+			fetch('https://api.myjson.com/bins/hdp1z').then(function (resp) {
+				return resp.json();
+			}).then(function (img) {
+				return _this2.setState({
+					images: img
+				});
+			}).catch(function (e) {
+				return console.log(e);
+			});
 		}
+
+		//		loadData = () => {
+		//			let page = this.state.page + 1;			
+		//			fetch('https://api.myjson.com/bins/hdp1z/items?_page='+page+'&_limit=6')
+		//			.then( resp => resp.json() )
+		//			.then( img => {
+		//				let stateImages = [...this.state.images, ...img];
+		//				
+		//				this.setState({ 
+		//					images: stateImages ,
+		//					page: page
+		//				}) 
+		//			})
+		//			.catch( e => console.log(e) );
+		//		}
+
 	}, {
 		key: 'render',
 		value: function render() {
 			if (this.state.images === null) {
 				return null;
 			}
-
-			var gallery = this.state.images.map(function (el) {
+			console.log(this.state.images);
+			var gallery = this.state.images.items.map(function (el) {
 				return _react2.default.createElement(
 					'li',
 					null,
@@ -25683,7 +25686,7 @@ var Gallery = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ className: 'clearfix' },
-					_react2.default.createElement(_TextTyper2.default, { text: 'Watch the gallery of images' }),
+					_react2.default.createElement(_TextTyper2.default, { text: 'Watch the gallery of images from self-made Json' }),
 					_react2.default.createElement(
 						'ul',
 						{ className: 'gallery' },

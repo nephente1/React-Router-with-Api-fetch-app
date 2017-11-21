@@ -6,46 +6,46 @@ class Gallery extends React.Component {
         constructor(props){
 			super(props);
 			this.state = {
-				images: [],
+				images: null, //[]
 				page: 0
 			}
 		}
 		
 		componentDidMount(){
-			this.loadData();			
-//			fetch('http://localhost:3000/items?_page=1&_limit=6')
-//			.then( resp => resp.json() )
-//			.then( img => this.setState({ 
-//				images: img 
-//			}) )
-//			.catch( e => console.log(e) );
-		}
-	
-		loadData = () => {
-			let page = this.state.page + 1;			
-			fetch('http://localhost:3000/items?_page='+page+'&_limit=6')
+//			this.loadData();			
+			fetch('https://api.myjson.com/bins/hdp1z')
 			.then( resp => resp.json() )
-			.then( img => {
-				let stateImages = [...this.state.images, ...img];
-				
-				this.setState({ 
-					images: stateImages ,
-					page: page
-				}) 
-			})
+			.then( img => this.setState({ 
+				images: img 
+			}) )
 			.catch( e => console.log(e) );
 		}
+	
+//		loadData = () => {
+//			let page = this.state.page + 1;			
+//			fetch('https://api.myjson.com/bins/hdp1z/items?_page='+page+'&_limit=6')
+//			.then( resp => resp.json() )
+//			.then( img => {
+//				let stateImages = [...this.state.images, ...img];
+//				
+//				this.setState({ 
+//					images: stateImages ,
+//					page: page
+//				}) 
+//			})
+//			.catch( e => console.log(e) );
+//		}
 		
 		render(){
 			if(this.state.images === null) {
 				return null;
 			}
-			
-			let gallery = this.state.images.map( el => <li><img src={el.url}/></li>);
+			console.log(this.state.images);
+			let gallery = this.state.images.items.map( el => <li><img src={el.url}/></li>);
 			
 			return <div>
 				<div className="clearfix">
-			<TextTyper text = "Watch the gallery of images" />
+			<TextTyper text = "Watch the gallery of images from self-made Json" />
 				
 				<ul className="gallery">
 					{gallery}

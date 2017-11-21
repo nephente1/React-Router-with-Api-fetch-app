@@ -30,7 +30,7 @@ class Photos extends React.Component {
 			let zdjecia = this.state.images.data.map( el => <li><img src={el.images.low_resolution.url} /></li>);
 			
 			return <div className="clearfix">
-			<TextTyper text = "Checkout some photos from Instagram" />
+			<TextTyper text = "Some photos from Instagram Api" />
 				<ul className="instafeed" >
 					{zdjecia}
 				</ul>

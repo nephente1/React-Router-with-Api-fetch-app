@@ -25,7 +25,7 @@ class About extends React.Component {
 			}
 			
 			return (<div>
-			<TextTyper text = "NASA: Photo of the Day" />
+			<TextTyper text = "NASA: Photo of the Day from Nasa-Api" />
 				<p>Get some cosmic inspiration for every day...</p>
 				<div><img src={this.state.nasaPhoto.url} /></div>	
 				
