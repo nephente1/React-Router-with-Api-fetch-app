@@ -14178,17 +14178,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         'p',
                         null,
                         _react2.default.createElement('img', { src: './images/react.png' }),
-                        'This is my first React.js application. I\'ve used React router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. '
+                        'This is my first React.js application. I\'ve used React Router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. And Webpack as a module bundler.'
                     ),
                     _react2.default.createElement(
                         'p',
                         null,
-                        'There are some examples of using in diffrent ways how to present the content. '
+                        'There are some examples of presenting the API content. '
                     ),
                     _react2.default.createElement(
                         'p',
                         null,
-                        'Pictures have a source in the external api. What it include?'
+                        'Pictures have a source in the external api\'s. What it include?'
                     ),
                     _react2.default.createElement(
                         'p',

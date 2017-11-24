@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function(){
 				<div>
             	<TextTyper text = "Welcome to my React App!" />
             	
-            	<p><img src="./images/react.png"></img>This is my first React.js application. I've used React router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. </p>
-					<p>There are some examples of using in diffrent ways how to present the content. </p>
-           	<p>Pictures have a source in the external api. What it include?</p>
+            	<p><img src="./images/react.png"></img>This is my first React.js application. I've used React Router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. And Webpack as a module bundler.</p>
+					<p>There are some examples of presenting the API content. </p>
+           	<p>Pictures have a source in the external api's. What it include?</p>
             	<p>
 				<ul>
             	<li>We have a NASA picture of the day, that changes automaticly every day. </li>
