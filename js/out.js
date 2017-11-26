@@ -25612,6 +25612,8 @@ var _TextTyper2 = _interopRequireDefault(_TextTyper);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -25626,8 +25628,24 @@ var Gallery = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (Gallery.__proto__ || Object.getPrototypeOf(Gallery)).call(this, props));
 
+		_this.loadData = function () {
+			var page = _this.state.page + 1;
+			fetch('http://my-json-server.typicode.com/nephente1/React-Router-with-Api-fetch-app/items?_page=' + page + '&_limit=6').then(function (resp) {
+				return resp.json();
+			}).then(function (img) {
+				var stateImages = [].concat(_toConsumableArray(_this.state.images), _toConsumableArray(img));
+
+				_this.setState({
+					images: stateImages,
+					page: page
+				});
+			}).catch(function (e) {
+				return console.log(e);
+			});
+		};
+
 		_this.state = {
-			images: null, //[]
+			images: [],
 			page: 0
 		};
 		return _this;
@@ -25636,43 +25654,22 @@ var Gallery = function (_React$Component) {
 	_createClass(Gallery, [{
 		key: 'componentDidMount',
 		value: function componentDidMount() {
-			var _this2 = this;
-
-			//			this.loadData();			
-			fetch('https://api.myjson.com/bins/hdp1z').then(function (resp) {
-				return resp.json();
-			}).then(function (img) {
-				return _this2.setState({
-					images: img
-				});
-			}).catch(function (e) {
-				return console.log(e);
-			});
+			this.loadData();
+			//			fetch('https://api.myjson.com/bins/hdp1z')
+			//			.then( resp => resp.json() )
+			//			.then( img => this.setState({ 
+			//				images: img 
+			//			}) )
+			//			.catch( e => console.log(e) );
 		}
-
-		//		loadData = () => {
-		//			let page = this.state.page + 1;			
-		//			fetch('https://api.myjson.com/bins/hdp1z/items?_page='+page+'&_limit=6')
-		//			.then( resp => resp.json() )
-		//			.then( img => {
-		//				let stateImages = [...this.state.images, ...img];
-		//				
-		//				this.setState({ 
-		//					images: stateImages ,
-		//					page: page
-		//				}) 
-		//			})
-		//			.catch( e => console.log(e) );
-		//		}
-
 	}, {
 		key: 'render',
 		value: function render() {
 			if (this.state.images === null) {
 				return null;
 			}
-			console.log(this.state.images);
-			var gallery = this.state.images.items.map(function (el) {
+			//			console.log(this.state.images);
+			var gallery = this.state.images.map(function (el) {
 				return _react2.default.createElement(
 					'li',
 					null,
