@@ -14191,26 +14191,22 @@ document.addEventListener('DOMContentLoaded', function () {
                         'Pictures have a source in the external api\'s. What it include?'
                     ),
                     _react2.default.createElement(
-                        'p',
+                        'ul',
                         null,
                         _react2.default.createElement(
-                            'ul',
+                            'li',
                             null,
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                'We have a NASA picture of the day, that changes automaticly every day. '
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                'Instagram photos of a User, content will be updated whe user add some next pictures to his own account on instagram. '
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                null,
-                                'A gallery of pictures, that have a source in my own built json included on the server.'
-                            )
+                            'We have a NASA picture of the day, that changes automaticly every day. '
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Instagram photos of a User, content will be updated whe user add some next pictures to his own account on instagram. '
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'A gallery of pictures, that have a source in my own built json included on the server.'
                         )
                     )
                 );

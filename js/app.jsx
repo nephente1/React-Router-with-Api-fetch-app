@@ -24,12 +24,11 @@ document.addEventListener('DOMContentLoaded', function(){
             	<p><img src="./images/react.png"></img>This is my first React.js application. I've used React Router to navigate the page. The content has been filled with API and fetch() method for showing the Pictures. And Webpack as a module bundler.</p>
 					<p>There are some examples of presenting the API content. </p>
            	<p>Pictures have a source in the external api's. What it include?</p>
-            	<p>
 				<ul>
             	<li>We have a NASA picture of the day, that changes automaticly every day. </li>
 					<li>Instagram photos of a User, content will be updated whe user add some next pictures to his own account on instagram. </li>
             	<li>A gallery of pictures, that have a source in my own built json included on the server.</li>
-            	</ul></p>
+            	</ul>
 			</div>
 				)
         }
