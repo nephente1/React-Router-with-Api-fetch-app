@@ -25630,7 +25630,7 @@ var Gallery = function (_React$Component) {
 
 		_this.loadData = function () {
 			var page = _this.state.page + 1;
-			fetch('http://my-json-server.typicode.com/nephente1/React-Router-with-Api-fetch-app/items?_page=' + page + '&_limit=6').then(function (resp) {
+			fetch('https://my-json-server.typicode.com/nephente1/React-Router-with-Api-fetch-app/items?_page=' + page + '&_limit=6').then(function (resp) {
 				return resp.json();
 			}).then(function (img) {
 				var stateImages = [].concat(_toConsumableArray(_this.state.images), _toConsumableArray(img));

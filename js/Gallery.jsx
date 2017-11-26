@@ -23,7 +23,7 @@ class Gallery extends React.Component {
 	
 		loadData = () => {
 			let page = this.state.page + 1;			
-			fetch('http://my-json-server.typicode.com/nephente1/React-Router-with-Api-fetch-app/items?_page='+page+'&_limit=6')
+			fetch('https://my-json-server.typicode.com/nephente1/React-Router-with-Api-fetch-app/items?_page='+page+'&_limit=6')
 			.then( resp => resp.json() )
 			.then( img => {
 				let stateImages = [...this.state.images, ...img];
